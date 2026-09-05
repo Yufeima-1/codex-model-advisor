@@ -8,7 +8,7 @@
 
 安装后在 Codex 中输入：
 
-    $model-advisor 我准备处理一组科研数据并制作论文图片，请推荐模型和推理强度。
+    $model-advisor 我准备处理……（任务描述），请推荐模型和推理强度。
 
 ## 安装
 
@@ -38,7 +38,7 @@ It provides routing advice only. It does not execute the proposed task, switch m
 
 After installation, invoke it explicitly in Codex:
 
-    $model-advisor I need to analyze a scientific dataset and prepare publication figures. Which model and reasoning level should I use?
+    $model-advisor I am preparing to handle ... (task description). Please recommend a model and reasoning level.
 
 ### Installation
 
