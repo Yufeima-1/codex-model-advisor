@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Advisor"
+  short_description: "Recommend a quota-efficient Codex model and reasoning level"
+  default_prompt: "Use $model-advisor to recommend the most quota-efficient model and reasoning level for my next task."
+
+policy:
+  allow_implicit_invocation: false
