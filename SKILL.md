@@ -20,7 +20,7 @@ Recommend the least expensive route that is likely to finish correctly. Optimize
 Infer these factors from the user's short description:
 
 1. How clear and bounded is the desired output?
-2. Is the work repetitive and mechanically verifiable, or does it require scientific, visual, editorial, or architectural judgment?
+2. Is the work repetitive and mechanically verifiable, or does it require domain, visual, editorial, or architectural judgment?
 3. How many files, tools, steps, and modalities are involved?
 4. What is the cost of a plausible mistake or a full retry?
 5. Can the work be split into a cheap production stage and a stronger review stage?
@@ -33,7 +33,7 @@ Prefer the lowest adequate rung:
 
 - **Luna Low** — very clear, short, repeatable, or deterministic work: extraction, renaming, formatting, translation, simple commands, tiny targeted edits, and bulk mechanical processing with objective checks.
 - **Luna Medium** — bounded multi-step work with an explicit procedure and reliable validation; a good production worker for batches.
-- **Terra Medium** — default for normal multi-step work: everyday coding, several files or tools, document processing, data pipelines, debugging with tests, and scientific computation where some judgment is needed.
+- **Terra Medium** — default for normal multi-step work: everyday coding, several files or tools, document processing, data pipelines, debugging with tests, and analysis where some judgment is needed.
 - **Terra High** — use sparingly when Terra-level work has subtle edge cases or needs stronger verification, but is not genuinely open-ended.
 - **Sol Medium** — complex, ambiguous, or high-value work needing careful planning, synthesis, writing, or judgment.
 - **Sol High** — difficult review, subtle debugging, consequential conclusions, or final quality control where a retry would be costly.
@@ -55,24 +55,27 @@ Do not recommend retired or unavailable models. If a named model is absent from 
 When it materially saves quota, recommend two stages instead of one expensive model for everything:
 
 - Use Luna for inventory, extraction, conversion, batch processing, and other deterministic production.
-- Use Terra for analysis, integration, tests, and normal scientific or coding judgment.
+- Use Terra for analysis, integration, tests, and normal domain or coding judgment.
 - Use Sol or Astra only for the narrow ambiguous section or final audit.
 
 Prefer reusing the same task when its context is directly useful. Suggest a fresh task only when unrelated accumulated context would be large enough to waste quota or confuse the work.
 
-## Domain-specific adjustments
 
-### Scientific data and HRTEM/FFT
+## Task-type adjustments
 
-- File inventory, format conversion, fixed ROI batch FFT, and export can use Luna Medium if the procedure and checks are explicit.
-- Choosing ROIs, calibrating reciprocal space, indexing reflections, evaluating uncertainty, and deciding what the evidence supports should normally use Terra Medium or Sol High.
-- For a combined pipeline, recommend cheap batch processing plus a stronger interpretation and final audit. Do not treat FFT alone as phase proof.
 
-### Character art and Codex pets
+### Data and batch processing
 
-- Prompt cleanup, file organization, deterministic spritesheet assembly, metadata, and validation can use Luna Medium or Terra Medium.
-- Visual identity, consistency across directions and animations, difficult repair, and final visual QA normally need Terra Medium or Sol Medium.
-- Image-generation calls have their own substantial quota cost. Advise limiting variants and approving one design before producing the complete animation sheet; a cheaper language model does not remove image-generation cost.
+- File inventory, format conversion, fixed-rule processing, extraction, and batch export can use Luna Medium when the procedure and checks are explicit.
+- Defining criteria, interpreting ambiguous patterns, evaluating uncertainty, and deciding what the evidence supports normally need Terra Medium or Sol High.
+- For a mixed workflow, recommend inexpensive batch production plus a stronger interpretation and final audit.
+
+
+### Creative and media work
+
+- Prompt cleanup, file organization, deterministic assembly, metadata, and validation can use Luna Medium or Terra Medium.
+- Visual identity, consistency across outputs, difficult repair, and final visual QA normally need Terra Medium or Sol Medium.
+- Image-generation calls have their own substantial quota cost. Advise limiting variants and approving one direction before producing a complete output set; a cheaper language model does not remove image-generation cost.
 
 ### Coding and documents
 
